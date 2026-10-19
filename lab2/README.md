@@ -4,12 +4,23 @@
 
 ## Запуск
 
+macOS/Linux:
+
 ```bash
 cd lab2
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python manage.py runserver 127.0.0.1:8000
+```
+
+Windows (PowerShell):
+
+```powershell
+cd lab2
+py -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe manage.py runserver 127.0.0.1:8000
 ```
 
 Откройте `http://127.0.0.1:8000/`. База данных и миграции не нужны. Сервер предназначен для локальной демонстрации: JSON-файл защищён от одновременной записи потоков одного процесса, поэтому запускайте один процесс сервера. При необходимости задайте путь к файлу переменной `STUDENTS_FILE`.

@@ -13,14 +13,25 @@
 
 ### ЛР 1
 
+macOS/Linux:
+
 ```bash
 cd lab1
 python3 -m http.server 8000
 ```
 
+Windows (PowerShell):
+
+```powershell
+cd lab1
+py -m http.server 8000
+```
+
 Откройте `http://localhost:8000/`. При дальнейшей работе используйте тот же хост: cookie на `localhost` и `127.0.0.1` различаются.
 
 ### ЛР 2
+
+macOS/Linux:
 
 ```bash
 cd lab2
@@ -30,7 +41,16 @@ pip install -r requirements.txt
 python manage.py runserver 127.0.0.1:8001
 ```
 
-Откройте `http://127.0.0.1:8001/`. API доступен по `/api/requests`; полный список методов и примеры находятся в [инструкции ЛР 2](lab2/README.md). База данных и миграции не требуются. Для проверки выполните `python manage.py check` и `python manage.py test requests_api`.
+Windows (PowerShell):
+
+```powershell
+cd lab2
+py -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe manage.py runserver 127.0.0.1:8001
+```
+
+Откройте `http://127.0.0.1:8001/`. API доступен по `/api/requests`; полный список методов и примеры находятся в [инструкции ЛР 2](lab2/README.md). База данных и миграции не требуются. Для проверки выполните `python manage.py check` и `python manage.py test requests_api`; в Windows вместо `python` используйте `.\.venv\Scripts\python.exe`.
 
 ## Как связаны работы
 
