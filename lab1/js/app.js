@@ -45,6 +45,7 @@ function renderStudents() {
 
   const isSearching = query !== "";
   table.hidden = visibleStudents.length === 0;
+  table.parentElement.hidden = visibleStudents.length === 0;
   emptyState.hidden = visibleStudents.length !== 0;
 
   emptyTitle.textContent = isSearching ? "Ничего не найдено" : "Список пуст";

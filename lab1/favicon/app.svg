@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#1946ba"/><path d="M17 18h9v28h-9zm21 0h9v28h-9zM26 36h12v10H26z" fill="white"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Котик">
+  <rect width="64" height="64" rx="6" fill="#2645b3"/>
+  <path d="M13 11 23 19a27 27 0 0 1 18 0l10-8v23c0 12-8 20-19 20S13 46 13 34Z" fill="#f8f9fc"/>
+  <path d="m18 18 6 5-7 3zm28 0-6 5 7 3z" fill="#b8c8ee"/>
+  <circle cx="24" cy="34" r="2.5" fill="#2b2d33"/>
+  <circle cx="40" cy="34" r="2.5" fill="#2b2d33"/>
+  <path d="m29 41 3 3 3-3zm3 3v3m0 0-4 2m4-2 4 2M21 43l-7-2m7 5-7 1m29-4 7-2m-7 5 7 1" fill="none" stroke="#2b2d33" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+</svg>

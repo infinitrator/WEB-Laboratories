@@ -4,24 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Студенты — список</title>
-  <link rel="icon" href="favicon/app.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="icon" href="favicon/app.svg?v=2" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
   <header class="header">
+    <div class="app-rail" aria-label="Быстрый доступ">
+      <a href="index.html" class="rail-link active" aria-label="Студенты" title="Студенты">≡</a>
+      <a href="student-form.html" class="rail-link" aria-label="Добавить запись" title="Добавить запись">+</a>
+    </div>
     <div class="header-container">
-      <div class="brand">
-        <a href="index.html" class="logo">Учёт общежития</a>
-        <span class="project-note">Учебный проект · стиль ИСУ ИТМО</span>
-      </div>
-      <nav class="nav">
-        <a href="index.html" class="nav-link active">Студенты</a>
-        <a href="student-form.html" class="nav-link">Добавить</a>
+      <div class="brand"><a href="index.html" class="logo">ИСУ ИТМО</a><span class="brand-note">учебный проект</span></div>
+      <nav class="nav" aria-label="Разделы портала">
+        <span class="nav-heading">Учебный процесс</span>
+        <a href="index.html" class="nav-link active" aria-current="page">Студенты</a>
+        <a href="student-form.html" class="nav-link">Добавить запись</a>
       </nav>
+      <div class="sidebar-footer">
+        <span class="sidebar-title">Учёт общежития</span>
+        <span class="project-note">Учебный проект по мотивам ИСУ ИТМО</span>
+      </div>
     </div>
   </header>
 
   <main class="main" id="main-content">
+    <div class="topbar">
+      <span class="topbar-title">Учёт общежития</span>
+      <span class="topbar-meta">Лабораторная работа №1 · учебный проект</span>
+    </div>
     <div class="container">
       <div id="notice" class="notice" hidden></div>
 
@@ -29,6 +39,7 @@
         <h1>Список студентов</h1>
       </div>
 
+      <div class="section-bar">Обзор</div>
       <div class="stats">
         <div class="stat-card">
           <div class="stat-value" id="dorm-count">0</div>
@@ -40,44 +51,47 @@
         </div>
       </div>
 
-      <div class="controls">
-        <a href="student-form.html" class="btn btn-primary">Добавить студента</a>
-        <div class="search-box">
-          <label for="search-input" class="search-label">Поиск</label>
-          <input 
-            type="text" 
-            id="search-input" 
-            class="search-input" 
-            placeholder="Введите ФИО или группу..."
-          >
+      <div class="section-bar">Список студентов</div>
+      <section class="list-panel" aria-label="Список студентов">
+        <div class="controls">
+          <a href="student-form.html" class="btn btn-primary">Добавить студента</a>
+          <div class="search-box">
+            <label for="search-input" class="search-label">Поиск</label>
+            <input
+              type="text"
+              id="search-input"
+              class="search-input"
+              placeholder="Введите ФИО или группу..."
+            >
+          </div>
         </div>
-      </div>
 
-      <div class="table-wrapper">
-        <table class="students-table" id="students-table">
-          <thead>
-            <tr>
-              <th>Студент</th>
-              <th>Группа</th>
-              <th>ИСУ ID</th>
-              <th>Общежитие</th>
-              <th>Срок заселения</th>
-              <th>Действия</th>
-            </tr>
-          </thead>
-          <tbody id="students-table-body">
-          </tbody>
-        </table>
-      </div>
+        <div class="table-wrapper">
+          <table class="students-table" id="students-table">
+            <thead>
+              <tr>
+                <th>Студент</th>
+                <th>Группа</th>
+                <th>ИСУ ID</th>
+                <th>Общежитие</th>
+                <th>Срок заселения</th>
+                <th>Действия</th>
+              </tr>
+            </thead>
+            <tbody id="students-table-body">
+            </tbody>
+          </table>
+        </div>
 
-      <div id="empty-state" class="empty-state" hidden>
-        <div class="empty-icon"></div>
-        <h2 id="empty-title" class="empty-title">Список пуст</h2>
-        <p id="empty-text" class="empty-text">Добавьте первого студента</p>
-        <a href="student-form.html" class="btn btn-primary">Добавить студента</a>
-      </div>
+        <div id="empty-state" class="empty-state" hidden>
+          <div class="empty-icon"></div>
+          <h2 id="empty-title" class="empty-title">Список пуст</h2>
+          <p id="empty-text" class="empty-text">Добавьте первого студента</p>
+          <a href="student-form.html" class="btn btn-primary">Добавить студента</a>
+        </div>
 
-      <div id="results-summary" class="results-summary"></div>
+        <div id="results-summary" class="results-summary"></div>
+      </section>
     </div>
   </main>
 
