@@ -4,25 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Профиль студента</title>
-  <link rel="icon" href="favicon/app.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="icon" href="favicon/app.svg?v=2" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
   <header class="header">
+    <div class="app-rail" aria-label="Быстрый доступ">
+      <a href="index.html" class="rail-link active" aria-label="Студенты" title="Студенты">≡</a>
+      <a href="student-form.html" class="rail-link" aria-label="Добавить запись" title="Добавить запись">+</a>
+    </div>
     <div class="header-container">
-      <div class="brand">
-        <a href="index.html" class="logo">Учёт общежития</a>
-        <span class="project-note">Учебный проект · стиль ИСУ ИТМО</span>
-      </div>
-      <nav class="nav">
-        <a href="index.html" class="nav-link active">Студенты</a>
-        <a href="student-form.html" class="nav-link">Добавить</a>
+      <div class="brand"><a href="index.html" class="logo">ИСУ ИТМО</a><span class="brand-note">учебный проект</span></div>
+      <nav class="nav" aria-label="Разделы портала">
+        <span class="nav-heading">Учебный процесс</span>
+        <a href="index.html" class="nav-link active" aria-current="page">Студенты</a>
+        <a href="student-form.html" class="nav-link">Добавить запись</a>
       </nav>
+      <div class="sidebar-footer">
+        <span class="sidebar-title">Учёт общежития</span>
+        <span class="project-note">Учебный проект по мотивам ИСУ ИТМО</span>
+      </div>
     </div>
   </header>
 
   <main class="main" id="main-content">
+    <div class="topbar">
+      <span class="topbar-title">Учёт общежития</span>
+      <span class="topbar-meta">Лабораторная работа №2 · учебный проект</span>
+    </div>
     <div class="container">
+      <div class="page-header"><h1>Профиль студента</h1></div>
       <div id="notice" class="notice" hidden></div>
 
       <a href="index.html" class="back-link">← Вернуться к списку</a>

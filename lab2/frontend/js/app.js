@@ -40,6 +40,7 @@ async function renderStudents() {
     const emptyState = document.getElementById("empty-state");
     tableBody.replaceChildren(...students.map(createStudentRow));
     table.hidden = students.length === 0;
+    table.parentElement.hidden = students.length === 0;
     emptyState.hidden = students.length !== 0;
     document.getElementById("empty-title").textContent = isFiltering ? "Ничего не найдено" : "Список пуст";
     document.getElementById("empty-text").textContent = isFiltering ? "Попробуйте изменить фильтры" : "Добавьте первого студента";
