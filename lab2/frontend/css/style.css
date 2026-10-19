@@ -8,7 +8,9 @@
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html, body { width: 100%; }
+html { overflow-x: hidden; }
 body {
+  min-width: 240px;
   margin: 0;
   background: #fff;
   color: #303238;
